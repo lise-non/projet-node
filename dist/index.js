@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require('dotenv').config();
 const express_1 = __importDefault(require("express"));
+const jwt_1 = require("./authenticate/jwt");
 const constants_1 = require("./config/constants");
 const Router_1 = require("./routes/Router");
 const app = (0, express_1.default)();
@@ -18,3 +19,4 @@ app.get("/", (req, res) => res.send("Hello world"));
 app.listen(constants_1.PORT, () => {
     console.log('Server is listening on port', constants_1.PORT);
 });
+console.log('le token jwt :', (0, jwt_1.generateToken)());

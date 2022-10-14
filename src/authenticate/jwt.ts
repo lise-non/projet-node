@@ -30,7 +30,7 @@ export function generateToken() {
  
  // generation du token JWT
  // Note: la passphrase devrait être dans le .env
- return sign(payload, {key:privateKey, passphrase:'coco le hibou'}, signInOptions);
+ return sign(payload, {key:privateKey, passphrase:'jeveuxdurouge'}, signInOptions);
 }
  
 interface TokenPayload {

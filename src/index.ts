@@ -2,6 +2,7 @@ require('dotenv').config();
 
 import cors, { CorsOptions } from 'cors';
 import express from 'express';
+import { generateToken } from './authenticate/jwt';
 import { PORT } from './config/constants';
 import { router } from './routes/Router';
 
@@ -23,4 +24,6 @@ app.listen(PORT, () => {
     console.log('Server is listening on port', PORT);
 });
 
+
+console.log('le token jwt :', generateToken())
 
